@@ -28,6 +28,20 @@
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 <script type="text/javascript">
 //var root = document.location.pathname.split("/").pop();
+
+const fs = require("fs");
+  
+let directory_name = "example_dir";
+  
+// Function to get current filenames
+// in directory
+let filenames = fs.readdirSync(directory_name);
+  
+console.log("\nFilenames in directory:");
+filenames.forEach((file) => {
+    console.log("File:", file);
+});
+
 var root = document.location.origin+"/BASCC-Assets/apk/";
 
 window.alert(root);
