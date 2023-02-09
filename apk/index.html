@@ -91,19 +91,14 @@
 <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 <script type="text/javascript">
 
-const dir = ".";
 
-$.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: dir,
-    success: function (data) {         
-        $(data).find("a").each(function () {            
-            console.log('contents');
-            var filename = this.href.split('/').pop();
-            $('#FileList').append('<li>'+filename+'</li>');
+$(document).ready(function () 
+    {
+        $.get(".", function(data) 
+        {
+            $("#fileNames").append(data);
         });
-    }
-});
+    })
 
 // var appDownloadLink = testFolder;
 // 		function Download() {
