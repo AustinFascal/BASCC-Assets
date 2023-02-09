@@ -1,4 +1,6 @@
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -7,86 +9,31 @@
 	<link rel="stylesheet" href="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/default_thank_you.css">
 	<script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/jquery-1.9.1.min.js"></script>
 	<script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/html5shiv.js"></script>
-	<!-- <script type="module">
-		// Import the functions you need from the SDKs you need
-		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
-		import { getRemoteConfig } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-remote-config.js";
-		 import { fetchAndActivate } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-remote-config.js";
-		 import { getValue } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-remote-config.js";
-		// TODO: Add SDKs for Firebase products that you want to use
-		// https://firebase.google.com/docs/web/setup#available-libraries
-	  
-		// Your web app's Firebase configuration
-		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-		const firebaseConfig = {
-		  apiKey: "AIzaSyDS6_n-Fa5qu01Mrye5wHrK4YjmHUGHUP4",
-		  authDomain: "bas-control-center-2.firebaseapp.com",
-		  databaseURL: "https://bas-control-center-2-default-rtdb.asia-southeast1.firebasedatabase.app",
-		  projectId: "bas-control-center-2",
-		  storageBucket: "bas-control-center-2.appspot.com",
-		  messagingSenderId: "712665313449",
-		  appId: "1:712665313449:web:a82894595535a9050339b8",
-		  measurementId: "G-RS2QHKVRYZ"
-		};
-	  
-		// Initialize Firebase
-		const app = initializeApp(firebaseConfig);
-		const remoteConfig = getRemoteConfig();
-		remoteConfig.settings.minimumFetchIntervalMillis = 5000;
-		const isFetched = await fetchAndActivate(remoteConfig);
-	
-		fetchAndActivate(remoteConfig)
-  .then(() => {
-	 if (isFetched){
-		let generalLink = getValue(remoteConfig, "app_update_new_apk_download_link");
-		let appVersion = getValue(remoteConfig, "app_version_code");
-		//document.getElementById("appVersion").innerHTML = appVersion;
-	
-		var appDownloadLink = generalLink+appVersion+".apk";
-		function Download() {
-			document.getElementById('downloadApkIframe').src = appDownloadLink;
-		};
-		Download();
-		
-		window.alert(appDownloadLink);
-	 } else{
-	
-	 }
-   
-    
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-	// if (isFetched){
-		
-	// } else{
-	
-	// }
-	
-	// fetchConfig();
-	// activate();
-	
-	  </script> -->
 	
 </head>
 <body>
-	<iframe style="display: none" src="https://austinfascal.github.io/BASCC-Assets/apk/1_1_12_rc205.apk"></iframe>
+	<!-- <iframe style="display: none" src="1_1_12_rc205.apk"></iframe> -->
 	<header class="site-header" id="header">
 		<h1 class="site-header__title" style="font-size: 20pt;">Mengunduh ...</h1>
 	</header>
 
 	<div class="main-content">
 		<i class="fa fa-check main-content__checkmark" id="checkmark"></i>
-		<p class="main-content__body" data-lead-id="main-content-body">Jika unduhan Anda tidak dimulai secara otomatis, klik <a href="https://austinfascal.github.io/BASCC-Assets/apk/1_1_12_rc205.apk">tautan ini</a>.</p>
+		<p class="main-content__body" data-lead-id="main-content-body">Jika unduhan Anda tidak dimulai secara otomatis, klik <a href="1_1_12_rc205.apk">tautan ini</a>.</p>
 	</div>
+	
+	
+	<?php 
+	
+	$out = array();
+	foreach (glob('.apk') as $filename) {
+		$p = pathinfo($filename);
+		$out[] = $p['filename'];
+	}
 
-	<!-- <footer class="site-footer" id="footer">
-		<p class="site-footer__fineprint" id="fineprint">Copyright ©2014 | All Rights Reserved</p>
-	</footer> -->
-
+	echo json_encode($out); 
+	
+	echo 'test' ?>
 	
 </body>
 
