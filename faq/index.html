@@ -21,6 +21,7 @@
       <div class="faq-list list-group nav nav-tabs">
         <a href="#tab1" class="list-group-item active" role="tab" data-toggle="tab"> Umum</a>
         <a href="#tab2" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-account"></i> Akun/Profil</a>
+        <a href="#tab2" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-account"></i> Keamanan</a>
       </div>
     </ul>
   </div>
@@ -29,14 +30,27 @@
       <div class="tab-pane active" id="tab1">
         <div class="panel-group" id="help-accordion-1">
           <div class="panel panel-default panel-help">
-            <a href="#opret-produkt" data-toggle="collapse" data-parent="#help-accordion-1">
+            <a href="#helpGeneral1" data-toggle="collapse" data-parent="#help-accordion-1">
               <div class="panel-heading">
-                <h2>Saya tidak memiliki koneksi internet, apakah saya masih bisa menggunakan aplikasi?</h2>
+                <h2>Apakah saya masih bisa menggunakan aplikasi saat internet mati?</h2>
               </div>
             </a>
-            <div id="opret-produkt" class="collapse in">
+            <div id="helpGeneral1" class="collapse in">
               <div class="panel-body">
-                <p>Anda masih bisa melihat data secara offline, namun tidak bisa melakukan operasi berupa membuat atau update data apapun, seperti membuat Good Issue, Jurnal Good Issue, Cash Out, Invoice, dan AIO. Untuk saat ini, operasi berupa lihat detail dan hapus data dapat dijalankan secara offline. Adapun operasi hapus data akan di-update di database saat Anda memiliki koneksi internet kembali.</p>
+                <p>Anda masih bisa melihat data secara offline, namun tidak bisa melakukan operasi berupa membuat atau update data Good Issue, Jurnal Good Issue, Cash Out, Invoice, AIO, dll. Untuk saat ini, operasi berupa lihat detail dan hapus data dapat dijalankan secara offline. Adapun operasi hapus data akan di-update di database saat Anda memiliki koneksi internet kembali.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default panel-help">
+            <a href="#helpGeneral2" data-toggle="collapse" data-parent="#help-accordion-1">
+              <div class="panel-heading">
+                <h2>Kenapa berkas ekspor tidak bisa disimpan?</h2>
+              </div>
+            </a>
+            <div id="helpGeneral2" class="collapse">
+              <div class="panel-body">
+                <p>Hal ini bisa disebabkan oleh 3 (dua) hal. Pertama, bisa disebabkan oleh koneksi internet yang tidak stabil, solusinya yaitu melakukan pemeriksaan terhadap koneksi internet Anda. Kedua, disebabkan oleh kegagalan sistem (bug), solusinya yaitu dengan melaporkan kejadian melalui menu <strong><a href="#">Laporkan Masalah</a></strong>. Ketiga, disebabkan oleh pengaturan pemilihan jenis perangkat yang tidak sesuai.</p>
+                <p>Untuk mengatasi masalah yang ketiga, berikut dijelaskan langkah-langkah cara mengatasinya.</p>
               </div>
             </div>
           </div>
@@ -48,13 +62,20 @@
           <div class="panel panel-default panel-help">
             <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-2">
               <div class="panel-heading">
-                <h2>Lorem ipsum?</h2>
+                <h2>Bagaimana cara merubah data profil akun?</h2>
               </div>
             </a>
             <div id="help-three" class="collapse in">
               <div class="panel-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
-                <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
+                <p>Berikut adalah langkah-langkah cara mengubah data profil akun.</p>
+                <ol>
+                  <li>Pada halaman <strong>Dashboard</strong>, tekan gambar foto profil di pojok kanan atas.</li>
+                  <li>Pada halaman <strong>Profil Akun</strong>, tekan tombol titik 3 di pojok kanan atas, lalu pilih <strong>Ubah Profil.</strong></li>
+                  <li>Setelah selesai melakukan perubahan, simpan dengan menekan tombol <strong>UPDATE PROFIL</strong>.</li>
+                </ol>
+                <img class="col-md-4 col-md-4-override" src="img/change_profile_1.jpg">
+                <img class="col-md-4 col-md-4-override" src="img/change_profile_2.jpg">
+                <img class="col-md-4 col-md-4-override" src="img/change_profile_3.jpg">
               </div>
             </div>
           </div>
@@ -62,52 +83,45 @@
           <div class="panel panel-default panel-help">
             <a href="#rediger-produkt" data-toggle="collapse" data-parent="#help-accordion-2">
               <div class="panel-heading">
-                <h2>How do I upload a new profile picture?</h2>
+                <h2>Bagaimana cara merubaha foto profil akun?</h2>
               </div>
             </a>
             <div id="rediger-produkt" class="collapse">
               <div class="panel-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
-                <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
+                <p>Berikut adalah langkah-langkah cara mengubah foto profil akun.</p>
+                <ol>
+                  <li>Pada halaman <strong>Dashboard</strong>, tekan gambar foto profil di pojok kanan atas.</li>
+                  <li>Pada halaman <strong>Profil Akun</strong>, tekan gambar foto profil.</li>
+                  <li>Tekan tombol <strong>PILIH GAMBAR</strong>, lalu pilih foto yang Anda inginkan.</li>
+                  <li>Setelah memilih foto, pastikan gambar foto profil Anda telah berubah menjadi foto pilihan Anda. Kemudian tekan tombol <strong>UPLOAD</strong>, untuk menyimpan perubahan.</li>
+                </ol>
+                <img class="col-md-4 col-md-4-override" src="img/change_profile_pic_1.jpg">
+                <img class="col-md-4 col-md-4-override" src="img/change_profile_pic_2.jpg">
+                <img class="col-md-4 col-md-4-override" src="img/change_profile_pic_3.jpg">
               </div>
             </div>
           </div>
           <div class="panel panel-default panel-help">
             <a href="#ret-pris" data-toggle="collapse" data-parent="#help-accordion-2">
               <div class="panel-heading">
-                <h2>Can I change my phone number?</h2>
+                <h2>Bagaimana cara mengubah email akun?</h2>
               </div>
             </a>
             <div id="ret-pris" class="collapse">
               <div class="panel-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
-                <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
+                <p>Berikut adalah langkah-langkah cara mengubah email akun.</p>
               </div>
             </div>
           </div>
           <div class="panel panel-default panel-help">
             <a href="#slet-produkt" data-toggle="collapse" data-parent="#help-accordion-2">
               <div class="panel-heading">
-                <h2>Where do I change my privacy settings?</h2>
+                <h2>Bagaimana cara mengubah kata sandi akun?</h2>
               </div>
             </a>
             <div id="slet-produkt" class="collapse">
               <div class="panel-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
-                <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default panel-help">
-            <a href="#opret-kampagne" data-toggle="collapse" data-parent="#help-accordion-2">
-              <div class="panel-heading">
-                <h2>What is this?</h2>
-              </div>
-            </a>
-            <div id="opret-kampagne" class="collapse">
-              <div class="panel-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nesciunt ut officiis accusantium quisquam minima praesentium, beatae fugit illo nobis fugiat adipisci quia distinctio repellat culpa saepe, optio aperiam est!</p>
-                <p><strong>Example: </strong>Facere, id excepturi iusto aliquid beatae delectus nemo enim, ad saepe nam et.</p>
+                <p>Berikut adalah langkah-langkah cara mengubah email akun.</p>
               </div>
             </div>
           </div>
