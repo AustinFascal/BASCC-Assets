@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Bootstrap FAQ example with tabs and accordions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BASCC - FAQ</title>
   
   
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
@@ -11,6 +12,21 @@
 
       <link rel="stylesheet" href="css/style.css">
 
+      <script>
+        function copyElementText(id) {
+    var text = document.getElementById(id).innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+
+    
+  alert("Tersalin: " + elem.value);
+}
+
+      </script>
   
 </head>
 
@@ -44,7 +60,7 @@
           <div class="panel panel-default panel-help">
             <a href="#helpGeneral2" data-toggle="collapse" data-parent="#help-accordion-1">
               <div class="panel-heading">
-                <h2>Kenapa berkas ekspor tidak bisa disimpan?</h2>
+                <h2>Bagaimana caranya saya bisa melaporkan masalah?</h2>
               </div>
             </a>
             <div id="helpGeneral2" class="collapse">
@@ -54,6 +70,36 @@
               </div>
             </div>
           </div>
+          <div class="panel panel-default panel-help">
+            <a href="#helpGeneral3" data-toggle="collapse" data-parent="#help-accordion-1">
+              <div class="panel-heading">
+                <h2>Kenapa berkas ekspor tidak bisa disimpan?</h2>
+              </div>
+            </a>
+            <div id="helpGeneral3" class="collapse">
+              <div class="panel-body">
+                <p>Hal ini bisa disebabkan oleh 3 (tiga) hal. Pertama, bisa disebabkan oleh koneksi internet yang tidak stabil, solusinya yaitu melakukan pemeriksaan terhadap koneksi internet Anda. Kedua, disebabkan oleh kegagalan sistem (bug), solusinya yaitu dengan melaporkan kejadian melalui menu <strong><a href="#">Laporkan Masalah</a></strong>. Ketiga, disebabkan oleh pengaturan pemilihan jenis perangkat yang tidak sesuai.</p>
+                <p>Untuk mengatasi masalah yang ketiga, berikut dijelaskan langkah-langkah cara mengatasinya.</p>
+                <ol>
+                  <li>Pada halaman <strong>Dashboard</strong>, tekan gambar foto profil di pojok kanan atas.</li>
+                  <li>Pada halaman <strong>Profil Akun</strong>, tekan tombol <strong>Pengaturan</strong> sebelah tombol titik 3.</li>
+                  <li>Pada bagian <strong>Umum</strong>, tekan pilihan <strong>Jenis Perangkat</strong>.</li>
+                  <li>Terakhir, pilih jenis perangkat yang Anda gunakan. Setelah selesai, coba untuk melakukan ekspor berkas kembali.</li>
+                </ol>
+                <img class="col-md-4 col-md-4-override" src="img/fix_export_problem_1.jpg">
+                <img class="col-md-4 col-md-4-override" src="img/fix_export_problem_2.jpg">
+                <img class="col-md-4 col-md-4-override" src="img/fix_export_problem_3.jpg">
+                <img class="col-md-4 col-md-4-override" src="img/fix_export_problem_4.jpg">
+                <p>Catatan: Berikut ini adalah lokasi berkas Anda disimpan berdasarkan jenis perangkat.</p>
+                <ol type="a">
+                  <li>Desktop/Tablet Windows: <span id="device1">C:\ProgramData\BlueStacks_nxt\Engine\UserData\SharedFolder</span>. <img width="14px" height="14px" onclick="copyElementText('device1')" src="img/icon_copy.png"></li> 
+                  <li>Desktop macOS: <span id="device2">null</span>. <img width="14px" height="14px" onclick="copyElementText('device2')" src="img/icon_copy.png"></li> 
+                  <li>Smartphone/Tablet Android: <span id="device3">/storage/emulated/0/Documents/BASCC</span>. <img width="14px" height="14px" onclick="copyElementText('device3')" src="img/icon_copy.png"></li> 
+                </ol>
+              </div>
+            </div>
+          </div>
+         
           
         </div>
       </div>
@@ -62,7 +108,7 @@
           <div class="panel panel-default panel-help">
             <a href="#help-three" data-toggle="collapse" data-parent="#help-accordion-2">
               <div class="panel-heading">
-                <h2>Bagaimana cara merubah data profil akun?</h2>
+                <h2>Bagaimana cara mengubah data profil akun?</h2>
               </div>
             </a>
             <div id="help-three" class="collapse in">
@@ -83,7 +129,7 @@
           <div class="panel panel-default panel-help">
             <a href="#rediger-produkt" data-toggle="collapse" data-parent="#help-accordion-2">
               <div class="panel-heading">
-                <h2>Bagaimana cara merubaha foto profil akun?</h2>
+                <h2>Bagaimana cara mengubah foto profil akun?</h2>
               </div>
             </a>
             <div id="rediger-produkt" class="collapse">
